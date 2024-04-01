@@ -43,7 +43,7 @@ namespace projLocadora
             this.cmBoxGenFilme = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.cmBoxProf = new System.Windows.Forms.ComboBox();
+            this.cmBoxProd = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtAnoLancamento = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -100,6 +100,7 @@ namespace projLocadora
             this.btnUltimo.TabIndex = 15;
             this.btnUltimo.Text = ">>";
             this.btnUltimo.UseVisualStyleBackColor = true;
+            this.btnUltimo.Click += new System.EventHandler(this.btnUltimo_Click);
             // 
             // btnProximo
             // 
@@ -109,6 +110,7 @@ namespace projLocadora
             this.btnProximo.TabIndex = 14;
             this.btnProximo.Text = ">";
             this.btnProximo.UseVisualStyleBackColor = true;
+            this.btnProximo.Click += new System.EventHandler(this.btnProximo_Click);
             // 
             // btnAnterior
             // 
@@ -118,6 +120,7 @@ namespace projLocadora
             this.btnAnterior.TabIndex = 13;
             this.btnAnterior.Text = "<";
             this.btnAnterior.UseVisualStyleBackColor = true;
+            this.btnAnterior.Click += new System.EventHandler(this.btnAnterior_Click);
             // 
             // BtnPrimeiro
             // 
@@ -127,6 +130,7 @@ namespace projLocadora
             this.BtnPrimeiro.TabIndex = 12;
             this.BtnPrimeiro.Text = "<<";
             this.BtnPrimeiro.UseVisualStyleBackColor = true;
+            this.BtnPrimeiro.Click += new System.EventHandler(this.BtnPrimeiro_Click);
             // 
             // groupBox1
             // 
@@ -171,6 +175,12 @@ namespace projLocadora
             // cmBoxGenFilme
             // 
             this.cmBoxGenFilme.FormattingEnabled = true;
+            this.cmBoxGenFilme.Items.AddRange(new object[] {
+            "Suspense",
+            "Coméda",
+            "Terror",
+            "Drama",
+            "Romance"});
             this.cmBoxGenFilme.Location = new System.Drawing.Point(189, 35);
             this.cmBoxGenFilme.Name = "cmBoxGenFilme";
             this.cmBoxGenFilme.Size = new System.Drawing.Size(121, 28);
@@ -180,7 +190,7 @@ namespace projLocadora
             // 
             this.groupBox2.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.cmBoxProf);
+            this.groupBox2.Controls.Add(this.cmBoxProd);
             this.groupBox2.Location = new System.Drawing.Point(15, 131);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(316, 161);
@@ -197,13 +207,13 @@ namespace projLocadora
             this.label4.TabIndex = 8;
             this.label4.Text = "Produtra";
             // 
-            // cmBoxProf
+            // cmBoxProd
             // 
-            this.cmBoxProf.FormattingEnabled = true;
-            this.cmBoxProf.Location = new System.Drawing.Point(170, 44);
-            this.cmBoxProf.Name = "cmBoxProf";
-            this.cmBoxProf.Size = new System.Drawing.Size(121, 28);
-            this.cmBoxProf.TabIndex = 7;
+            this.cmBoxProd.FormattingEnabled = true;
+            this.cmBoxProd.Location = new System.Drawing.Point(170, 44);
+            this.cmBoxProd.Name = "cmBoxProd";
+            this.cmBoxProd.Size = new System.Drawing.Size(121, 28);
+            this.cmBoxProd.TabIndex = 7;
             // 
             // label3
             // 
@@ -273,6 +283,7 @@ namespace projLocadora
             this.Name = "frmFilmes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Filmes";
+            this.Load += new System.EventHandler(this.frmFilmes_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -295,7 +306,7 @@ namespace projLocadora
         private System.Windows.Forms.Button BtnPrimeiro;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cmBoxProf;
+        private System.Windows.Forms.ComboBox cmBoxProd;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtAnoLancamento;
         private System.Windows.Forms.Label label2;
