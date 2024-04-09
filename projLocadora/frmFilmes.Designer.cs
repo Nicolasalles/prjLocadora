@@ -63,6 +63,7 @@ namespace projLocadora
             this.btnAlterar.TabIndex = 19;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnExcluir
             // 
@@ -72,6 +73,7 @@ namespace projLocadora
             this.btnExcluir.TabIndex = 18;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnSalvar
             // 
@@ -91,6 +93,7 @@ namespace projLocadora
             this.btnNovo.TabIndex = 16;
             this.btnNovo.Text = "Novo";
             this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // btnUltimo
             // 

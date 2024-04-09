@@ -1,0 +1,12 @@
+C:\Users\LabInfo\Desktop\locadora\projLocadora\bin\Debug\projLocadora.exe.config
+C:\Users\LabInfo\Desktop\locadora\projLocadora\bin\Debug\projLocadora.exe
+C:\Users\LabInfo\Desktop\locadora\projLocadora\bin\Debug\projLocadora.pdb
+C:\Users\LabInfo\Desktop\locadora\projLocadora\obj\Debug\projLocadora.csproj.AssemblyReference.cache
+C:\Users\LabInfo\Desktop\locadora\projLocadora\obj\Debug\projLocadora.frmPrincipal.resources
+C:\Users\LabInfo\Desktop\locadora\projLocadora\obj\Debug\projLocadora.frmFilmes.resources
+C:\Users\LabInfo\Desktop\locadora\projLocadora\obj\Debug\projLocadora.frmProdutoras.resources
+C:\Users\LabInfo\Desktop\locadora\projLocadora\obj\Debug\projLocadora.Properties.Resources.resources
+C:\Users\LabInfo\Desktop\locadora\projLocadora\obj\Debug\projLocadora.csproj.GenerateResource.cache
+C:\Users\LabInfo\Desktop\locadora\projLocadora\obj\Debug\projLocadora.csproj.CoreCompileInputs.cache
+C:\Users\LabInfo\Desktop\locadora\projLocadora\obj\Debug\projLocadora.exe
+C:\Users\LabInfo\Desktop\locadora\projLocadora\obj\Debug\projLocadora.pdb
