@@ -247,42 +247,96 @@ namespace projLocadora
             carregaTudoProdutoras();
             btnAlterar.Enabled = false;
         }
-   private void btnSalvar_Click(object sender, EventArgs e)
-    {
-        if (novo)
-        {
-            string sql = "insert into tblFilme (tituloFilme, " +
-                "anoFilme, codProd, generoFilme) values (' " +
-                txtTituloFilme.Text + " ' , " + txtAnoLancamento.Text +
-                ",  " + cmBoxProd.SelectedValue.ToString() +
-                " , ' " + cmBoxGenFilme.Text + " ')";
-            SqlConnection con = new SqlConnection(connectionString);
-            SqlCommand cmd = new SqlCommand(sql, con);
-            cmd.CommandType = CommandType.Text;
-            con.Open();
-            try
+       private void btnSalvar_Click(object sender, EventArgs e)
+       {
+            if (novo)
             {
-                int i = cmd.ExecuteNonQuery();
-                if (i > 0)
+                string sql = "insert into tblFilme (tituloFilme, " +
+                    "anoFilme, codProd, generoFilme) values (' " +
+                    txtTituloFilme.Text + " ' , " + txtAnoLancamento.Text +
+                    ",  " + cmBoxProd.SelectedValue.ToString() +
+                    " , ' " + cmBoxGenFilme.Text + " ')";
+                SqlConnection con = new SqlConnection(connectionString);
+                SqlCommand cmd = new SqlCommand(sql, con);
+                cmd.CommandType = CommandType.Text;
+                con.Open();
+                try
                 {
-                    MessageBox.Show("Filme cadastrado com sucesso");
-                    this.frmFilmes_Load(this, e);
+                    int i = cmd.ExecuteNonQuery();
+                    if (i > 0)
+                    {
+                        MessageBox.Show("Filme cadastrado com sucesso");
+                        this.frmFilmes_Load(this, e);
+                    }
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro: " + ex.ToString());
-            }
-            finally
-            {
-                con.Close();
-            }
-        }
-        else
-        {
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro: " + ex.ToString());
+                }
+                finally
+                {
+                    con.Close();
+                }
+                txtCodFilme.Enabled = false;
+                txtAnoLancamento.Enabled = false;
+                cmBoxGenFilme.Enabled = false;
+                cmBoxProd.Enabled = false;
 
-        }
-    } 
+                btnSalvar.Enabled = false;
+                btnNovo.Enabled = true;
+                btnAlterar.Enabled = true;
+                btnExcluir.Enabled = true;
+
+                BtnPrimeiro.Enabled = true;
+                btnAnterior.Enabled = true;
+                btnProximo.Enabled = true;
+                btnUltimo.Enabled = true;
+            }
+            else
+            {
+                    string sql = "update tblFilme set tituloFilme='" + txtTituloFilme.Text + 
+                        " ', anoFilme= " + txtAnoLancamento.Text + 
+                        ", codProd=" + cmBoxProd.SelectedValue.ToString() + 
+                        ", generoFilme='" + cmBoxGenFilme.Text + "' where codFilme=" + txtCodFilme.Text;
+                SqlConnection con = new SqlConnection(connectionString);
+                SqlCommand cmd = new SqlCommand(sql, con);
+                cmd.CommandType = CommandType.Text;
+                con.Open();
+                try
+                {
+                    int i = cmd.ExecuteNonQuery();
+                    if (i > 0)
+                    {
+                        MessageBox.Show("Filme alterado com sucesso");
+                        this.frmFilmes_Load(this, e);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro: " + ex.ToString());
+                }
+                finally
+                {
+                    con.Close();
+                }
+                txtCodFilme.Enabled = false;
+                txtAnoLancamento.Enabled = false;
+                cmBoxGenFilme.Enabled = false;
+                cmBoxProd.Enabled = false;
+                
+                btnSalvar.Enabled = false;
+                btnNovo.Enabled = true;
+                btnAlterar.Enabled = true;
+                btnExcluir.Enabled = true;
+                
+                BtnPrimeiro.Enabled = true;
+                btnAnterior.Enabled = true;
+                btnProximo.Enabled = true;
+                btnUltimo.Enabled = true;
+                dtFilmes = new DataTable();
+                frmFilmes_Load(this, e);
+            }
+       } 
     
     }
     
